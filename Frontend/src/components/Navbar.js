@@ -9,7 +9,7 @@ export default function navbar() {
 
             <nav className="navbar">
             <h1>
-                The Resturent
+                The Restaurant
             </h1>
 <div className="links">
 

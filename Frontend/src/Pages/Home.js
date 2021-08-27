@@ -7,7 +7,7 @@ function Home() {
   return (
     <div className="home" style={{ backgroundImage: `url(${BannerImage})` }}>
       <div className="headerContainer">
-        <h1> The Resturant </h1>
+        <h1> The Restaurant </h1>
         <p> Find your taste</p>
         <Link to="/menu">
           <button> Select your Menu </button>
