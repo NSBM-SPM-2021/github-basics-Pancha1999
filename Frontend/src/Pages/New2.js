@@ -1,38 +1,21 @@
-import React from "react";
-import Order from "../assets/foods.jpg";
-import "../Styles/Foodordering.css";
+import React from 'react'
 import {Link} from 'react-router-dom';
-
-function Foodordering() {
-  return (
-      
-    <div className="foodorder">
-      <div
-        className="leftSide"
-        style={{ backgroundImage: `url(${Order})` }}
-      ></div>
-      <div className="rightSide">
-        <h1>Order Your Choices!</h1>
-        
-            <div className="scroll-div">
-                <div className="scroll-object">
-
-                
-
-            
-
-        <form id="order form" method="POST" >
-            
+import order from '../Assets/new.jpg';
+function FoodOrder() {
+    return (
+        <div >
+        <div className="rightside" style={{backgroundImage: `url(${order})`}}>
+            <h1>Order Page</h1>
+            <form id="order form" method="POST">
                 <label htmlFor="name">Full Name</label> <br/>
                 <input name="name" placeholder="Enter the Full Name..." type="text"/>
                 <label htmlFor="address">Address</label> <br/>
                 <input name="address" placeholder="Enter the Address..." type="text"/>
                 <label htmlFor="mobileno">Mobile No</label><br/>
-                <input name="mobileno" placeholder="Enter the Mobile No..." type="number"/>
+                <input name="mobileno" placeholder="Enter the Mobile No..." type="text"/>
                 <label htmlFor="quantity">Quantity</label><br/>
-                <input name="quantity" placeholder="Enter the Quantity..." type="number"/>  
+                <input name="quantity" placeholder="Enter the Quantity..." type="text"/>  
                 <label htmlFor="payment">Payment Method</label>
-               
                 <div >
                     <table>
                         <tr>
@@ -42,13 +25,10 @@ function Foodordering() {
                             <td style={{"height" : "25%", "width" : "20%"}}><input type="radio" value="Female" name="gender" /> </td>
                         </tr>
                     </table>
-                    
+              
    </div>
-                    <label htmlFor="Food Category">Food Item</label>
-                    <label htmlFor="price">Total</label>
   
                 <div >
-                <label htmlFor="TorD">Select your way</label>
                     <table>
                         <tr>
                             <td>Take Away</td>
@@ -65,12 +45,9 @@ function Foodordering() {
                 
    </div>
             </form>
-            </div>
-            </div>
-            </div>
-      </div>
-    
-  );
-}
-
-export default Foodordering;
+        </div>
+        
+    </div>
+)
+    }
+export default FoodOrder;

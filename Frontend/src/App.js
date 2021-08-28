@@ -9,6 +9,7 @@ import Contact from './Pages/Contact';
 import Foodordering from './Pages/Foodordering';
 import {BrowserRouter as Router,Route,Switch}from 'react-router-dom';
 
+
 function App() {
   return (
     <Router>
@@ -28,8 +29,10 @@ function App() {
         <Contact/>
       </Route>
       <Route path="/foodorder/:price">
+
         <Foodordering/>
       </Route>
+      
     </Switch>
     <Footer/>
      
