@@ -15,7 +15,7 @@ export const Menulist =[
         button:'Order'
     },
     {
-        name:'Seafood Fried Rice',
+       name:'Seafood Fried Rice',
         image:seafoodfriedrice,
         price:'750.00',
         button:'Order'

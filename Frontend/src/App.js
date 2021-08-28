@@ -28,7 +28,7 @@ function App() {
       <Route path="/contact">
         <Contact/>
       </Route>
-      <Route path="/foodorder/:price">
+      <Route path="/foodorder/:price/:name">
 
         <Foodordering/>
       </Route>

@@ -4,10 +4,11 @@ import { Link } from "react-router-dom";
 function Menuitem({image,name,price,}) {
     return (
         <div className='menuItem'>
-            <Link to={'/foodorder/'+price} >
+            <Link to={`/foodorder/${price}/${name}`}>
         <div style={{ backgroundImage: `url(${image})` }}></div>
             
          </Link>
+         
           <h1>{name}</h1>
           <p>Rs{price}</p> 
             
