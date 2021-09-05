@@ -1,0 +1,32 @@
+
+
+  .Navbar {
+    padding: 20px;
+    display: flex;
+    align-items: inherit;
+    width: 100%;
+
+    margin: 0 auto;
+    border-bottom: 5px solid goldenrod;
+    background-color: black;
+  }
+  .Navbar h1 {
+    color:goldenrod;
+    font-family: "Times New Roman", Times, serif;
+    text-align:center;
+  }
+  .Navbar .links {
+    margin-left:auto;
+  }
+
+  .Navbar a {
+    margin-left: 1px;
+    text-decoration: none;
+    padding: 50px;
+    color: white;
+  }
+  .Navbar a:hover {
+    color:gold;
+  }
+ 
+  
