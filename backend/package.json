@@ -1,17 +1,17 @@
 {
-  "name": "saloon-backend",
+  "name": "restaurant",
   "version": "1.0.0",
-  "description": "",
   "main": "app.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "server": "json-server --middlewares ./range.js"
+    "server": "json-server --middlewares ./range.js",
+    "start": "node server.js"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/Binuraowin/saloon-backend.git"
   },
-  "author": "",
+  "author": "kavindu",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/Binuraowin/saloon-backend/issues"
@@ -28,5 +28,7 @@
     "morgan": "^1.10.0",
     "multer": "^1.4.2",
     "uuid": "^8.3.2"
-  }
+  },
+  "devDependencies": {},
+  "description": ""
 }
