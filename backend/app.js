@@ -29,11 +29,12 @@ app.use((req,res,next) =>{
         next()
 })
 
-app.use('/orders',orderRoutes);
+app.use('/order',orderRoutes);
+
 
 
 //DB config
-const connection_url =  'mongodb://admin:admin@cluster0-shard-00-00.3rluf.mongodb.net:27017,cluster0-shard-00-01.3rluf.mongodb.net:27017,cluster0-shard-00-02.3rluf.mongodb.net:27017/savory?ssl=true&replicaSet=atlas-jo71cu-shard-0&authSource=admin&retryWrites=true&w=majority';
+const connection_url =  'mongodb://Admin:admin@cluster0-shard-00-00.0nokc.mongodb.net:27017,cluster0-shard-00-01.0nokc.mongodb.net:27017,cluster0-shard-00-02.0nokc.mongodb.net:27017/Restaurant?ssl=true&replicaSet=atlas-mqlv14-shard-0&authSource=admin&retryWrites=true&w=majority';
 mongodb://admin:admin@cluster0-shard-00-00.3rluf.mongodb.net:27017,cluster0-shard-00-01.3rluf.mongodb.net:27017,cluster0-shard-00-02.3rluf.mongodb.net:27017/savory?ssl=true&replicaSet=atlas-jo71cu-shard-0&authSource=admin&retryWrites=true&w=majority
 mongoose.connect(connection_url,{
     useNewUrlParser:true,

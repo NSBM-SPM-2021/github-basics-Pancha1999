@@ -14,10 +14,14 @@ exports.order_get_all = (req, res, next) => {
         // count: docs.length,
         products: docs.map(doc => {
           return {
-            name: doc.name,
-            address: doc.address,
-            mobileno: doc.mobileno,
-            quantity: doc.quantity,
+            name: result.name,
+            address: result.address,
+            mobileno: result.mobileno,
+            quantity: result.quantity,
+            fname: result.fname,
+            cash: result.cash,
+            price: result.price,
+            type: result.type,
             _id: doc._id,
             
           };
@@ -41,10 +45,10 @@ exports.order_get_all = (req, res, next) => {
 }
 
 exports.order_create = (req, res, next) => {
+  console.log("heloo")
   console.log (req.body)
   Order.find({
       name: req.body.name,
-      
     }).exec()
     .then(appointment => {
      
@@ -54,10 +58,10 @@ exports.order_create = (req, res, next) => {
           address: req.body.address,
           mobileno: req.body.mobileno,
           quantity: req.body.quantity,
-          fullname: req.body.fullname,
-          payment: req.body.payment,
-          way: req.body.way,
+          fname: req.body.fname,
+          cash: req.body.cash,
           price: req.body.price,
+          type: req.body.type,
           
           id: uuidv4(),
         });
@@ -68,9 +72,13 @@ exports.order_create = (req, res, next) => {
               message: "Food Ordered successfully",
               createdProduct: {
                 name: result.name,
-                date: result.price,
-                time: result.time,
-                service: result.service,
+                address: result.address,
+                mobileno: result.mobileno,
+                quantity: result.quantity,
+                fname: result.fname,
+                cash: result.cash,
+                price: result.price,
+                type: result.type,
                 
                 _id: result._id,
               }
@@ -99,12 +107,13 @@ exports.order_get_one = (req, res, next) => {
         res.status(201).json({
            id:1,
            name: doc[0].name,
-            address: doc[0].address,
-            mobileno: doc[0].mobileno,
-            quantity: doc[0].quantity,
-            consumer: doc[0].consumer,
-            email: doc[0].email,
-            phone: doc[0].phone,
+           address: doc[0].address,
+           mobileno: doc[0].mobileno,
+           quantity: doc[0].quantity,
+           fname: doc[0].fname,
+           cash: doc[0].cash,
+           price: doc[0].price,
+           type: doc[0].type,
             _id: doc[0]._id,
         });
       } else {
@@ -134,12 +143,13 @@ exports.order_update = (req, res, next) => {
       res.status(201).json({
         id:1,
         name: result.name,
-         address: result.address,
-         mobileno: result.mobileno,
-         quantity: result.quantity,
-         consumer: result.consumer,
-         email: result.email,
-         phone: result.phone,
+        address: result.address,
+        mobileno: result.mobileno,
+        quantity: result.quantity,
+        fname: result.fname,
+        cash: result.cash,
+        price: result.price,
+        type: result.type,
          _id: result._id,
        
      });
@@ -170,12 +180,13 @@ exports.order_delete = (req, res, next) => {
         res.status(201).json({
            id:1,
            name: result.name,
-         address: result.address,
-         mobileno: result.mobileno,
-         quantity: result.quantity,
-            consumer: result.consumer,
-            email: result.email,
-            phone: result.phone,
+           address: result.address,
+           mobileno: result.mobileno,
+           quantity: result.quantity,
+           fname: result.fname,
+           cash: result.cash,
+           price: result.price,
+           type: result.type,
             _id: result._id,
           
         });
