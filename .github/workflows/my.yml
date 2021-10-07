@@ -13,7 +13,7 @@ jobs:
       - uses: akhileshns/heroku-deploy@v3.12.12 # This is the action
         with:  
           branch: main
-          appdir: ./backend
+          appdir: ./Frontend
           heroku_api_key: ${{secrets.HEROKU_API_KEY}}
-          heroku_app_name: "the-resturant-backend" #Must be unique in Heroku
+          heroku_app_name: "the-resturant-frontend" #Must be unique in Heroku
           heroku_email: "kavindugayashan155@gmail.com"
