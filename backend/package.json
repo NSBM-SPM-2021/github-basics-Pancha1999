@@ -7,16 +7,8 @@
     "server": "json-server --middlewares ./range.js",
     "start": "node server.js"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/Binuraowin/saloon-backend.git"
-  },
   "author": "kavindu",
   "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/Binuraowin/saloon-backend/issues"
-  },
-  "homepage": "https://github.com/Binuraowin/saloon-backend#readme",
   "dependencies": {
     "bcrypt": "^5.0.0",
     "body-parser": "^1.19.0",
