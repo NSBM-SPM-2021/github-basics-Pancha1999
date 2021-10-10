@@ -23,7 +23,7 @@ function Foodordering() {
     function submit() {
 
         const order = { fname,address, mobileno, name,price,quantity,type,cash};
-        axios.post('http://localhost:3001/order', order)
+        axios.post('https://the-resturant-backend.herokuapp.com/order', order)
             .then(response =>
                     // console.log(response),
                     success(),
